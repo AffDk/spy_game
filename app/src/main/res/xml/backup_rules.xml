@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- Include shared preferences -->
+    <include domain="sharedpref" path="SpyGamePrefs.xml"/>
+    <!-- Exclude cache and temporary files -->
+    <exclude domain="cache" />
+</full-backup-content>

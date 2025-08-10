@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Custom Dark Theme Colors -->
+    <color name="dark_background">#FF121212</color>
+    <color name="dark_surface">#FF1E1E1E</color>
+    <color name="dark_primary">#FF6200EE</color>
+    <color name="dark_primary_variant">#FF3700B3</color>
+    <color name="dark_secondary">#FF03DAC6</color>
+    <color name="dark_on_background">#FFFFFFFF</color>
+    <color name="dark_on_surface">#FFFFFFFF</color>
+    <color name="dark_on_primary">#FFFFFFFF</color>
+    
+    <!-- Game Specific Colors -->
+    <color name="spy_red">#FFD32F2F</color>
+    <color name="word_blue">#FF1976D2</color>
+    <color name="button_enabled">#FF6200EE</color>
+    <color name="button_disabled">#FF424242</color>
+    <color name="alarm_red">#FFFF1744</color>
+    <color name="timer_warning">#FFFF9800</color>
+    
+    <!-- Background overlay -->
+    <color name="background_overlay">#AA000000</color>
+</resources>

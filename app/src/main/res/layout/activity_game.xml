@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_background"
+    tools:context=".GameActivity">
+
+    <!-- Background Image with Overlay -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/app_icon"
+        android:alpha="0.2" />
+
+    <View
+        android:id="@+id/backgroundOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_overlay" />
+
+    <!-- Game Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- App Icon (initially hidden, shown during timer) -->
+        <ImageView
+            android:id="@+id/gameIconImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/app_icon"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            android:contentDescription="App Icon" />
+
+        <!-- Game Info -->
+        <TextView
+            android:id="@+id/gameInfoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/players_info"
+            style="@style/GameText"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"
+            android:textSize="20sp" />
+
+        <!-- Timer (initially hidden) -->
+        <TextView
+            android:id="@+id/timerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TimerText"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"
+            android:visibility="gone" />
+
+        <!-- Abort Game Button (initially hidden, shown during timer) -->
+        <Button
+            android:id="@+id/abortGameButton"
+            style="@style/SpyGameButton"
+            android:text="@string/abort_game"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="@color/spy_red"
+            android:visibility="gone" />
+
+        <!-- Players ScrollView -->
+        <ScrollView
+            android:id="@+id/playersScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:id="@+id/playersContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center" />
+
+        </ScrollView>
+
+        <!-- Start Game Button (initially hidden) -->
+        <Button
+            android:id="@+id/startGameButton"
+            style="@style/SpyGameButton"
+            android:text="@string/start_game"
+            android:layout_marginTop="24dp"
+            android:textSize="20sp"
+            android:layout_height="80dp"
+            android:visibility="gone" />
+
+        <!-- Game Over Layout (initially hidden) -->
+        <LinearLayout
+            android:id="@+id/gameOverLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="24dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/game_over"
+                android:textColor="@color/alarm_red"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="24dp" />
+
+            <Button
+                android:id="@+id/newGameButton"
+                style="@style/SpyGameButton"
+                android:text="@string/new_game"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/closeAppButton"
+                style="@style/SpyGameButton"
+                android:text="@string/close_app"
+                android:backgroundTint="@color/spy_red" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
